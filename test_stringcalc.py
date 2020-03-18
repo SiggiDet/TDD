@@ -13,3 +13,6 @@ def test_two_num_string():
 
 def test_three_num_string():
     assert string_calculator.add("1,2,3") == 6
+
+def test_much_unknown_argument():
+    assert string_calculator.add("1,2,3,4,5,6,8,9,10,465") == 513
