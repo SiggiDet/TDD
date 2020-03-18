@@ -9,6 +9,3 @@ def add(number):
         for i in range (len(number_list)):
             number_list[i] = int(number_list[i])
         return sum(number_list)
-
-number = "1,2,3"
-add(number)

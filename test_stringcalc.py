@@ -10,3 +10,6 @@ def test_one_string():
 def test_two_num_string():
     """supports two numbers"""
     assert string_calculator.add("1,2") == 3
+
+def test_three_num_string():
+    assert string_calculator.add("1,2,3") == 6
