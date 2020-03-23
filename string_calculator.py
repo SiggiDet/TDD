@@ -1,3 +1,6 @@
+class NumberToHighError(Exception):
+    pass
+
 def get_num(number):
     """Gets the number from the string, and cuts the string"""
     len_of_number = len(number)
@@ -15,7 +18,7 @@ def get_num(number):
             i += 1
 
     new_number = number[i:] # disposing the number that we collected from the string (number)
-    return int_num,new_number # cuts the number away from the string
+    return int_num,new_number # cuts the number (prev) away from the string (number)
 
 def add_recur(number,prev= 0):
     """Recursive"""
@@ -30,6 +33,10 @@ def add_recur(number,prev= 0):
     else:
         prev,number = get_num(number)
         prev = int(prev)
+
+        if prev > 1000:
+            prev = 0
+
         return add_recur(number,prev)
 
 def add(number):
