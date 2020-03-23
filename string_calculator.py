@@ -1,4 +1,4 @@
-class NumberToHighError(Exception):
+class NegativeNumberError(Exception):
     pass
 
 def get_num(number):
@@ -35,8 +35,10 @@ def add_recur(number,prev= 0):
         prev = int(prev)
 
         if prev > 1000:
-            prev = 0
+            prev = prev - 1000
 
+        elif prev < 0:
+            raise 
         return add_recur(number,prev)
 
 def add(number):
