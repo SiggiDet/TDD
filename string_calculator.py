@@ -11,7 +11,7 @@ def get_num(number,delimeter, def_type = None): # def_type is either negative or
     while i != len_of_number: # The while loop is used for if the numbers happens to be longer then one letter
         if number[i] == delimeter:
             if def_type == "negative":
-                i += 1 # remove the ","
+                i += 1 # remove the delimeter
             break
 
         elif number[i] == "\n":
@@ -91,6 +91,7 @@ def get_delimeter(number):
 
 def add(number):
     """recieves a string and returns a value"""
+
     if number[0:2] == "//":
         delimeter,number = get_delimeter(number[2:])
     else:
