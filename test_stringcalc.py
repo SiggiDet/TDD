@@ -25,3 +25,6 @@ def test_more_then_thousand_argument():
 def test_negative_argument():
     with pytest.raises(string_calculator.NegativeNumError):
         string_calculator.add("-1,3,-2,5")
+
+def test_new_delimeter():
+    assert string_calculator.add("//X\n1X2X3") == 6
